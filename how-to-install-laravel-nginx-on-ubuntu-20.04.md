@@ -1,5 +1,7 @@
 # How To Install and Configure Laravel with Nginx on Ubuntu 20.04 
+
 ##Introduction
+
 [Laravel](https://laravel.com) is an open-source PHP framework that provides a set of tools and resources to build modern PHP applications. With a [complete ecosystem]( https://laravel.com/#ecosystem) leveraging its built-in features, Laravel’s popularity has grown rapidly in the past few years, with many developers adopting it as their framework of choice for a streamlined development process.
 In this guide, you’ll install and configure a new Laravel application on an Ubuntu 20.04 server, using [Composer]( https://getcomposer.org) to download and manage the framework dependencies and Nginx to serve the application. When you’re finished, you’ll have a functional Laravel demo application pulling content from a MySQL 8 database.
 ## Prerequisites
@@ -66,15 +68,10 @@ This will give you the following output:
 Next, create a table named `places` in the `travellist` database. From the MySQL console, run the following statement:
 ```
 CREATE TABLE travellist.places (
-
     id INT AUTO_INCREMENT,
-
     name VARCHAR(255),
-
     visited BOOLEAN,
-
     PRIMARY KEY(id)
-
 );
 ```
 Now, populate the `places` table with some sample data:
@@ -210,7 +207,6 @@ DB_PORT=3306
 DB_DATABASE=travellist
 DB_USERNAME=travellist_user
 DB_PASSWORD=password
-
 ...
 ```
 Adjust your variables accordingly. When you are done editing, save and close the file to keep your changes. If you’re using `nano`, you can do that with` CTRL`+`X`, then `Y` and `Enter` to confirm.
