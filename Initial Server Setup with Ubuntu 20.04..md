@@ -99,7 +99,9 @@ You should be logged in to the new user account without using a password. Rememb
 ``
 sudo command_to_run
 ```
+
 You will be prompted for your regular user password when using sudo for the first time each session (and periodically afterwards).
+
 ## Where To Go From Here?
 At this point, you have a solid foundation for your server. You can install any of the software you need on your server now.
 
