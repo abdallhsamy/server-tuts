@@ -1,4 +1,4 @@
-![ install letsencrypt SSL certificate](https://raw.githubusercontent.com/abdallhsamy/server-tuts/master/assets/img/ssl-certificate.png)
+![ install letsencrypt SSL certificate](https://raw.githubusercontent.com/abdallhsamy/server-tuts/master/assets/img/ssl.jpg)
 # How To Secure Nginx with Let's Encrypt on Ubuntu 20.04
 
 ## Introduction
