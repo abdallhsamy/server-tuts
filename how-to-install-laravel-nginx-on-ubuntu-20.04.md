@@ -177,6 +177,7 @@ Open the `.env` file using your command line editor of choice. Here we’ll use 
 nano .env
 ```
 Even though there are many configuration variables in this file, you don’t need to set up all of them now. The following list contains an overview of the variables that require immediate attention:
+
   * `APP_NAME`: Application name, used for notifications and messages.
   * `APP_ENV`: Current application environment.
   * `APP_KEY`: Used for generating salts and hashes, this unique key is automatically created when installing Laravel via Composer, so you don’t need to change it.
@@ -185,6 +186,7 @@ Even though there are many configuration variables in this file, you don’t nee
   * `DB_DATABASE`: Database name.
   * `DB_USERNAME`: Username to connect to the database.
   * `DB_PASSWORD`: Password to connect to the database.
+  
 By default, these values are configured for a local development environment that uses [Homestead]( https://laravel.com/docs/5.8/homestead), a prepackaged Vagrant box provided by Laravel. We’ll change these values to reflect the current environment settings of our example application.
 In case you are installing Laravel in a **development** or **testing** environment, you can leave the `APP_DEBUG` option enabled, as this will give you important debug information while testing the application from a browser. The `APP_ENV` variable should be set to `development` or `testing` in this case.
 In case you are installing Laravel in a **production** environment, you should disable the `APP_DEBUG` option, because it shows to the final user sensitive information about your application. The `APP_ENV` in this case should be set to `production`.
