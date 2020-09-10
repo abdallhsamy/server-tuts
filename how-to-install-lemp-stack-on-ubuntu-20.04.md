@@ -1,4 +1,4 @@
-![LEMP Stack]( https://community-cdn-digitalocean-com.global.ssl.fastly.net/variants/ETGqcpaD4x4s8zX5n7FmFKXC/035575f2985fe451d86e717d73691e533a1a00545d7230900ed786341dc3c882)
+![LEMP Stack](https://raw.githubusercontent.com/abdallhsamy/server-tuts/master/assets/img/lemp.jpg)
 
 # How To Install Linux, Nginx, MySQL, PHP (LEMP stack) on Ubuntu 20.04
 ## Introduction
