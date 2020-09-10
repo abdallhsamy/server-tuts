@@ -96,7 +96,8 @@ Now, open up a new terminal session on you local machine, and use SSH with your 
 ssh sammy@your_server_ip
 ```
 You should be logged in to the new user account without using a password. Remember, if you need to run a command with administrative privileges, type `sudo` before it like this:
-``
+
+```
 sudo command_to_run
 ```
 
