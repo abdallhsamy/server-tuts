@@ -16,9 +16,9 @@ The **root** user is the administrative user in a Linux environment that has ver
 The next step is setting up a new user account with reduced privileges for day-to-day use. Later, we’ll teach you how to gain increased privileges during only the times when you need them.
 ## Step 2 — Creating a New User
 Once you are logged in as **root**, we’re prepared to add the new user account. In the future, we’ll log in with this new account instead of **root**.
-This example creates a new user called **sammy**, but you should replace that with a username that you like:
+This example creates a new user called **samy**, but you should replace that with a username that you like:
 ```
-adduser sammy
+adduser samy
 ```
 You will be asked a few questions, starting with the account password.
 Enter a strong password and, optionally, fill in any of the additional information if you would like. This is not required and you can just hit `ENTER `in any field you wish to skip.
@@ -28,7 +28,7 @@ To avoid having to log out of our normal user and log back in as the **root** ac
 To add these privileges to our new user, we need to add the user to the **sudo** group. By default, on Ubuntu 20.04, users who are members of the **sudo** group are allowed to use the `sudo` command.
 As **root**, run this command to add your new user to the **sudo** group (substitute the highlighted username with your new user):
 ```
-usermod -aG sudo sammy
+usermod -aG sudo samy
 ```
 Now, when logged in as your regular user, you can type `sudo` before commands to perform actions with superuser privileges.
 ## Step 4 — Setting Up a Basic Firewall
@@ -74,7 +74,7 @@ The process for configuring SSH access for your new user depends on whether your
 If the root Account Uses Password Authentication
 If you logged in to your **root** account using a password, then password authentication is enabled for SSH. You can SSH to your new user account by opening up a new terminal session and using SSH with your new username:
 ```
-ssh sammy@your_server_ip
+ssh samy@your_server_ip
 ```
 After entering your regular user’s password, you will be logged in. Remember, if you need to run a command with administrative privileges, type `sudo` before it like this:
 ```
@@ -89,11 +89,11 @@ The simplest way to copy the files with the correct ownership and permissions is
 >  **Note**: The `rsync` command treats sources and destinations that end with a trailing slash differently than those without a trailing slash. When using `rsync` below, be sure that the source directory (`~/.ssh`) **does not** include a trailing slash (check to make sure you are not using `~/.ssh/`).
 > If you accidentally add a trailing slash to the command, `rsync` will copy the contents of the **root** account’s `~/.ssh` directory to the `sudo` user’s home directory instead of copying the entire ~/.ssh directory structure. The files will be in the wrong location and SSH will not be able to find and use them.
 ```
-rsync --archive --chown=sammy:sammy ~/.ssh /home/sammy
+rsync --archive --chown=samy:samy ~/.ssh /home/samy
 ```
 Now, open up a new terminal session on you local machine, and use SSH with your new username:
 ```
-ssh sammy@your_server_ip
+ssh samy@your_server_ip
 ```
 You should be logged in to the new user account without using a password. Remember, if you need to run a command with administrative privileges, type `sudo` before it like this:
 
